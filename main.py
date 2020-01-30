@@ -78,15 +78,15 @@ while stats.game_running:
             menu_functions.test_input_p2(event=event)
 
 
-    # if not stats.item_status.get("intro"):
-    #     menu_functions.intro(window=screen)
-    # elif not stats.item_status.get("title_menu"):
-    #     menu_functions.draw_menu(name="title_menu", window=screen)
-    # elif not stats.item_status.get("char_select"):
-    #     menu_functions.draw_menu(name="char_select", window=screen)
-    # elif not stats.item_status.get("stage_select"):
-    #     menu_functions.draw_menu(name="stage_select", window=screen)
-    # else:
-    in_game_functions.game_time(screen, "small")
+    if not stats.item_status.get("intro"):
+        menu_functions.intro(window=screen)
+    elif not stats.item_status.get("title_menu"):
+        menu_functions.draw_menu(name="title_menu", window=screen)
+    elif not stats.item_status.get("char_select"):
+        menu_functions.draw_menu(name="char_select", window=screen)
+    elif not stats.item_status.get("stage_select"):
+        menu_functions.draw_menu(name="stage_select", window=screen)
+    else:
+        in_game_functions.game_time(screen, "small")
 
     update()
