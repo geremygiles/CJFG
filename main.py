@@ -88,6 +88,6 @@ while stats.game_running:
         menu_functions.draw_menu(name="stage_select", window=screen)
     else:
         in_game_functions.game_time(screen, "small")
-    # End of game
+    # End of gaame
 
     update()
